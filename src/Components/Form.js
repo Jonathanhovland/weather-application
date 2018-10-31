@@ -1,10 +1,9 @@
 import React from "react"
 
-const Form = ({ getWeather }) => {
+const Form = ({ getWeather, handleChange }) => {
     return (
         <form onSubmit={ getWeather }>
-            <input type="text" name="city" placeholder="City..."></input>
-            <input type="text" name="country" placeholder="Country..."></input>
+            <input type="text" name="input" onChange={handleChange} placeholder="City or Zip Code..."></input>
             <button>Submit</button>
         </form>
     )
