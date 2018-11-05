@@ -9,10 +9,10 @@ class App extends Component {
 
   state = {
     input: '',
-    city: '',
-    date: '',
-    tempMax: 0,
-    tempMin: 0,
+    // city: '',
+    // date: '',
+    // tempMax: 0,
+    // tempMin: 0,
     days: []
   }
 
@@ -27,7 +27,7 @@ class App extends Component {
     let cityUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${this.state.input},us&mode=json&appid=80bebdcca0b791a791b9d6b812f71e83&units=imperial`
     const res = await fetch(isNaN(this.state.input) ? cityUrl : zipUrl)
     const data = await res.json()
-    // console.log(data.list[2].main)
+    console.log(data.list[2].main)
     const cleanDays = [
       this.cleanWeatherArray(data.list.slice(0,8)),
       this.cleanWeatherArray(data.list.slice(8,16)),
@@ -79,7 +79,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
-        <Weather date={this.state.date}/>
+        <Weather weatherData={this.state.days} input={this.state.input}/>
       </div>
     );
   }
