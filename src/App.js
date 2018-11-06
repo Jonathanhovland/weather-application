@@ -13,7 +13,8 @@ class App extends Component {
     // date: '',
     // tempMax: 0,
     // tempMin: 0,
-    days: []
+    days: [],
+    error: ''
   }
 
   handleChange = (e) => {
@@ -28,11 +29,10 @@ class App extends Component {
     const res = await fetch(isNaN(this.state.input) ? cityUrl : zipUrl)
     const data = await res.json()
     
-    // console.log(data.list[2].main)
-    if(!zipUrl || !cityUrl) {
-      this.setState({days: undefined})
-      
+    if(data.list === undefined) {
+      alert("Please enter valid City or Zip Code")
     } else {
+    // console.log(data.list[2].main)
     const cleanDays = [
       this.cleanWeatherArray(data.list.slice(0,8)),
       this.cleanWeatherArray(data.list.slice(8,16)),
