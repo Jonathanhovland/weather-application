@@ -27,7 +27,12 @@ class App extends Component {
     let cityUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${this.state.input},us&mode=json&appid=80bebdcca0b791a791b9d6b812f71e83&units=imperial`
     const res = await fetch(isNaN(this.state.input) ? cityUrl : zipUrl)
     const data = await res.json()
-    console.log(data.list[2].main)
+    
+    // console.log(data.list[2].main)
+    if(!zipUrl || !cityUrl) {
+      this.setState({days: undefined})
+      
+    } else {
     const cleanDays = [
       this.cleanWeatherArray(data.list.slice(0,8)),
       this.cleanWeatherArray(data.list.slice(8,16)),
@@ -40,7 +45,9 @@ class App extends Component {
       return this.findMinMax(day)
     })
 
+
     this.setState({days: finalData}, () => console.log('STATE', this.state))
+    }
   }
 
   cleanWeatherArray = (dayArray) => {
@@ -68,7 +75,7 @@ class App extends Component {
       }
     })
     return {
-      date: dayArray[0].dateTime.slice(0,10),
+      date: dayArray[0].dateTime.slice(5, 10),
       minimum: dayMin,
       maximum: dayMax
     }
@@ -77,10 +84,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
-        <Weather weatherData={this.state.days} input={this.state.input}/>
+       <div>
+        <div className="wrapper">
+          <div className="main">
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-5 header-container">
+                  <Header />
+                </div>
+                  <Weather weatherData={this.state.days} input={this.state.input}/>
+                  <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+        </div>
     );
   }
 }
