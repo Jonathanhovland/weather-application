@@ -6,7 +6,7 @@ Link: http://icky-root.surge.sh/
 
 ## Features
 
-You can search any City in the United States using their City name or Zip Code to get a 5 day forecast.
+You can search any City in the United States using their City name or Zip Code to get a 5 day forecast with error handeling.
 
 After the search you will get ther following results for each day.
 -Date
