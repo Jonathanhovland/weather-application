@@ -25,19 +25,17 @@
 
 input[type="text"] {
   background-color: rgb(211, 204, 204);
-  width: 30%;
-  padding-bottom: 4px;
-  color: #fff !important;
+  width: 35%;
+  padding-bottom: 5px;
+  color: #fff ;
   font-weight: lighter;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-  margin-right: 20px;
+  letter-spacing: 2.5px;
+  margin-bottom: 50px;
   font-size: 20px;
 }
 
 input[type="text"] { 
-  outline: none;
-  margin-left: 20%;
+  margin-left: 22%;
 }
 
 input:-webkit-autofill {
@@ -70,13 +68,6 @@ button {
 .weather__value {
   color: black;
   font-weight: 300;
-}
-
-.weather__error {
-  color: #3f8adfe0;
-  font-size: 20px;
-  letter-spacing: 1px;
-  font-weight: 200;
 }
 
 h1 {
