@@ -1,52 +1,7 @@
-/* .App {
-  text-align: center;
-}
-
-.flex-container {
-  width: 625px;
-  background: rgba(255, 145, 0, 0.952);
-  margin-left: 8%;
-  flex-direction: row;
-  flex-wrap: wrap
-}
-
-.container {
-  width: 581px;
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(70, 117, 187, 0.534);
-}
-
-.header {
-    background-image: url("https://www.professionaladviser.com/w-images/6ff41b1a-287c-4c25-b8f6-52fac40f834b/3/fill/rainorshine-580x358.jpg");
-    width: 1162px;
-    height: 325px;
-    margin-left: 9.1%;
-    margin-right: 5%;
-    width: 50%;
-    float: left
-}
-
-form {
-  width: 50%;
-}
-
-.container_form {
-  display: flex;
-  flex-direction: column;
-  align-content: center
-} */
-
 .wrapper {
-  background-color: rgb(145, 140, 140);
-  height: 25;
+  background: linear-gradient(to right, #7396d6, #c73828);
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.container {
-
 }
 
 .header-container {
@@ -58,7 +13,7 @@ form {
 }
 
 .header-container__header {
-  font-size: 60px;
+  font-size: 65px;
   letter-spacing: 10px;
   line-height: 3;
   font-family: 'Georgia', serif;
@@ -69,7 +24,7 @@ form {
 }
 
 input[type="text"] {
-  background-color: transparent;
+  background-color: rgb(211, 204, 204);
   width: 30%;
   padding-bottom: 4px;
   color: #fff !important;
@@ -82,7 +37,7 @@ input[type="text"] {
 
 input[type="text"] { 
   outline: none;
-  margin-left: 20%
+  margin-left: 20%;
 }
 
 input:-webkit-autofill {
@@ -102,7 +57,7 @@ button {
 
 .list-group-item {
   background: white;
-  width: 200px
+  width: 222.5px;
 }
 
 .weather__info {
@@ -124,4 +79,6 @@ button {
   font-weight: 200;
 }
 
-
+h1 {
+  text-shadow: 2px 2px white;
+}

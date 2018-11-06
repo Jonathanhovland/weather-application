@@ -1,20 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
-import Header from './Components/Header';
-import Form from './Components/Form';
-import Weather from './Components/Weather';
-
+import React, { Component } from "react"
+import "./App.css"
+import Header from "./Components/Header"
+import Form from "./Components/Form"
+import Weather from "./Components/Weather"
 
 class App extends Component {
 
   state = {
-    input: '',
-    // city: '',
-    // date: '',
-    // tempMax: 0,
-    // tempMin: 0,
-    days: [],
-    error: ''
+    input: "",
+    days: []
   }
 
   handleChange = (e) => {
@@ -28,11 +22,10 @@ class App extends Component {
     let cityUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${this.state.input},us&mode=json&appid=80bebdcca0b791a791b9d6b812f71e83&units=imperial`
     const res = await fetch(isNaN(this.state.input) ? cityUrl : zipUrl)
     const data = await res.json()
-    
+
     if(data.list === undefined) {
-      alert("Please enter valid City or Zip Code")
+      alert("Please enter a valid City or Zip Code")
     } else {
-    // console.log(data.list[2].main)
     const cleanDays = [
       this.cleanWeatherArray(data.list.slice(0,8)),
       this.cleanWeatherArray(data.list.slice(8,16)),
@@ -40,13 +33,10 @@ class App extends Component {
       this.cleanWeatherArray(data.list.slice(24,32)),
       this.cleanWeatherArray(data.list.slice(32,40))
     ]
-
     const finalData = cleanDays.map(day => {
       return this.findMinMax(day)
     })
-
-
-    this.setState({days: finalData}, () => console.log('STATE', this.state))
+    this.setState({days: finalData})
     }
   }
 
@@ -83,25 +73,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-       <div>
+      <React.Fragment>
         <div className="wrapper">
           <div className="main">
             <div className="container">
               <div className="row">
                 <div className="col-xs-5 header-container">
-                  <Header />
+                <Header />
                 </div>
-                  <Weather weatherData={this.state.days} input={this.state.input}/>
-                  <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
+                <Weather weatherData={this.state.days} input={this.state.input}/>
+                <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
               </div>
             </div>
           </div>
         </div>
-      </div>
-        </div>
-    );
+      </React.Fragment>
+    )
   }
 }
 
-export default App;
+export default App
