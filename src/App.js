@@ -46,8 +46,10 @@ class App extends Component {
         dateTime: weatherData.dt_txt,
         minimum: weatherData.main.temp_min,
         maximum: weatherData.main.temp_max,
+        main: weatherData.weather[0].main
       }
     })
+    console.log(cleanDay)
     return cleanDay
   }
 
@@ -66,8 +68,9 @@ class App extends Component {
     })
     return {
       date: dayArray[0].dateTime.slice(5, 10),
+      main: dayArray[0].main,
       minimum: dayMin,
-      maximum: dayMax
+      maximum: dayMax,
     }
   }
 

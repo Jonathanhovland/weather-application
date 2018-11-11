@@ -9,6 +9,7 @@ const Weather = ({ weatherData }) => {
                         <div className="list-group-item" key={i}>
                             <div className="weather__info">
                                 <div className="weather__value">{dailyData.date}</div>
+                                <div className="weather__value">{dailyData.main}</div>
                                 <div className="weather__value">Minimum: {dailyData.minimum}°F</div>
                                 <div className="weather__value">Maximum: {dailyData.maximum}°F</div>
                             </div>
