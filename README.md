@@ -10,5 +10,6 @@ You can search any City in the United States using their City name or Zip Code t
 
 After the search you will get ther following results for each day.
 -Date
+-Weather Description
 -Temperature Minimum
 -Temperature Maximum
