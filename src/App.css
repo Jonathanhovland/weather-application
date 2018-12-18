@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,29 +8,6 @@
   background: linear-gradient(to right, #787a7e, #b6b3b3);
   display: flex;
   justify-content: center;
-}
-
-.header-container {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom,
-      rgba(126, 213, 111, 0.80),
-      hsla(160, 64%, 43%, 0.80));
-  background-size: cover;
-  background-position:  top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-}
-
-.header-container__header {
-  font-size: 65px;
-  letter-spacing: 10px;
-  line-height: 3;
-  font-family: 'Georgia', serif;
-  background-image: linear-gradient(to right bottom,
-  rgba(112, 182, 161, 0.80),
-  hsla(160, 64%, 43%, 0.80)), 
-  url(https://www.telegraph.co.uk/content/dam/Travel/Cruise/worlds-most-beautiful-ports/newyork-harbour-xlarge.jpg);
-  clip-path: polygon(0 0, 100% 75, 100% 0, 0 100%)
 }
 
 .form-container {
@@ -87,7 +64,7 @@ button {
 
 h1 {
   text-shadow: 2px 2px white;
-} */
+}
 
 * {
   margin: 0;
@@ -107,9 +84,9 @@ h1 {
 .header-container {
   height: 95vh;
   background-image: linear-gradient(to right bottom,
-      rgba(173, 186, 171, 0.8),
-      rgba(105, 145, 131, 0.8)), 
-      url(https://www.telegraph.co.uk/content/dam/Travel/Cruise/worlds-most-beautiful-ports/newyork-harbour-xlarge.jpg);
+      rgba(242, 243, 242, 0.8),
+      rgba(187, 223, 238, 0.8)), 
+      url(/header.jpg);
   background-size: cover;
   background-position:  top;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);

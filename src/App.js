@@ -40,19 +40,22 @@ class App extends Component {
     }
   }
 
+
+
   cleanWeatherArray = (dayArray) => {
-    const cleanDay = dayArray.map(weatherData => {
+    const cleanDay = dayArray.map((weatherData, i) => {
       return {
         dateTime: weatherData.dt_txt,
         minimum: weatherData.main.temp_min,
         maximum: weatherData.main.temp_max,
-        main: weatherData.weather[0].main
+        main: weatherData.weather[0].description,
+        icon: weatherData.weather[0].icon,
+        key: {i}
       }
     })
-    console.log(cleanDay)
     return cleanDay
   }
-
+ 
   findMinMax = (dayArray) => {
 
     let dayMin = dayArray[0].minimum
@@ -69,27 +72,31 @@ class App extends Component {
     return {
       date: dayArray[0].dateTime.slice(5, 10),
       main: dayArray[0].main,
+      icon: dayArray[0].icon,
       minimum: dayMin,
-      maximum: dayMax,
+      maximum: dayMax
     }
   }
+
 
   render() {
     return (
       <React.Fragment>
-        <div className="wrapper">
+        <div className="wrapper" >
           <div className="main">
             <div className="container">
               <div className="row">
                 <div className="col-xs-5 header-container">
                 <Header />
                 </div>
-                <Weather weatherData={this.state.days} input={this.state.input}/>
-                <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
               </div>
             </div>
           </div>
         </div>
+      <div>
+        <Weather weatherData={this.state.days} input={this.state.input}/>
+        <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
+      </div>
       </React.Fragment>
     )
   }

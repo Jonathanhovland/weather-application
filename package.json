@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "node-sass": "^4.11.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.1.0"
@@ -12,7 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -22,5 +24,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "A 5 day forecast weather application, using a public API from OpenWeatherApp.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathanhovland/weather-application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathanhovland/weather-application/issues"
+  },
+  "homepage": "https://github.com/Jonathanhovland/weather-application#readme"
 }
