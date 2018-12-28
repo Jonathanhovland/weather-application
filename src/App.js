@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import "./App.css"
-import Header from "./Components/Header"
-import Form from "./Components/Form"
-import Weather from "./Components/Weather"
+import Header from "./components/Header"
+import Form from "./components/Form"
+import Weather from "./components/Weather"
 
 class App extends Component {
 
@@ -81,22 +81,12 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className="wrapper" >
-          <div className="main">
-            <div className="container">
-              <div className="row">
-                <div className="col-xs-5 header-container">
-                <Header />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div>
+      <React.Fragment>          
+      <Header />
+      <div className="weather">
         <Weather weatherData={this.state.days} input={this.state.input}/>
-        <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
       </div>
+        <Form getWeather={this.getWeather} handleChange={this.handleChange} city={this.state.city}/>
       </React.Fragment>
     )
   }

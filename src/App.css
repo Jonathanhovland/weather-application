@@ -1,18 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+.header {
+  text-align: center;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  line-height: 3;
+  font-family: 'Georgia', serif;
+  background-image: ("img/header.jpg");
 }
 
-.wrapper {
-  background: linear-gradient(to right, #787a7e, #b6b3b3);
-  display: flex;
-  justify-content: center;
-}
 
-.form-container {
-  width: 100%;
-}
 
 input[type="text"] {
   background-color: rgb(211, 204, 204);
@@ -31,7 +27,7 @@ input[type="text"] {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #282b2ee0 inset;
+  -webkit-box-shadow: 0 0 0 30px #cbcdcee0 inset;
   -webkit-text-fill-color: #fff !important;
 }
 
@@ -41,14 +37,20 @@ button {
   letter-spacing: 3px;
   font-size: 20px;
   cursor: pointer;
-  background-color: #282b2ee0;
+  background-color: #cbcdcee0;
   color: #fff;
+}
+
+.weather {
+  display: flex;
+  justify-content: center;
 }
 
 .list-group-item {
   background: white;
   width: 222.5px;
 }
+
 
 .weather__info {
   width: 50%;
@@ -64,58 +66,4 @@ button {
 
 h1 {
   text-shadow: 2px 2px white;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing:  border-box;
-}
-
-.wrapper {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-  padding: 30px;
-}
-
-.header-container {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom,
-      rgba(242, 243, 242, 0.8),
-      rgba(187, 223, 238, 0.8)), 
-      url(/header.jpg);
-  background-size: cover;
-  background-position:  top;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  position: relative;
-}
-
-.header-container__header {
-  display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-}
-
-@keyframes moveInLeft {
-  0% {
-      opacity: 0;
-      transform: translateX(-100px);
-  }
-
-  80% {
-      transform: translateX(10px);
-  }
-
-  100% {
-      opacity: 1;
-      transition: translate(0);
-  }
 }
