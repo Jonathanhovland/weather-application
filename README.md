@@ -1,5 +1,7 @@
 # Weather Application
 
+React / Bootstrap
+
 A 5 day forecast weather application, using a public API from OpenWeatherApp.
 
 Link: http://icky-root.surge.sh/
