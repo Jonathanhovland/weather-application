@@ -1,5 +1,7 @@
 # Weather Application
 
+In Progress
+
 React / Bootstrap
 
 A 5 day forecast weather application, using a public API from OpenWeatherApp.
