@@ -18,3 +18,6 @@ After the search you will get ther following results for each day.
 -Weather image
 -Temp. Minimum
 -Temp. Maximum
+
+<img width="1000" alt="screen shot 2019-02-08 at 4 23 12 pm" src="https://user-images.githubusercontent.com/40579877/52511635-181f5d00-2bbe-11e9-8cf8-262b9bf8f303.png">
+<img width="1170" alt="screen shot 2019-02-08 at 4 23 29 pm" src="https://user-images.githubusercontent.com/40579877/52511636-19508a00-2bbe-11e9-9f07-9738946319cf.png">
