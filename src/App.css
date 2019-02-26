@@ -1,29 +1,32 @@
 
 .header {
+  height: 100%;
+  width: 100%;
   text-align: center;
   font-size: 6rem;
   letter-spacing: 1rem;
   line-height: 3;
   font-family: 'Georgia', serif;
-  background-image: ("img/header.jpg");
+  background-color: #cbcdcee0
 }
 
 
 
 input[type="text"] {
-  background-color: rgb(211, 204, 204);
+  background-color: #cbcdcee0;
   width: 35%;
   padding-bottom: 5px;
   color: #fff ;
   font-weight: lighter;
   letter-spacing: 2.5px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  /* margin-top: 100px;
+  margin-bottom: 100px; */
   font-size: 20px;
 }
 
 input[type="text"] { 
-  margin-left: 22%;
+  float: left;
+  margin-left: 10px
 }
 
 input:-webkit-autofill {
@@ -37,18 +40,21 @@ button {
   letter-spacing: 3px;
   font-size: 20px;
   cursor: pointer;
-  background-color: #cbcdcee0;
+  background-color: #cbcdcea6;
   color: #fff;
 }
 
 .weather {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  float: right;
 }
 
 .list-group-item {
   background: white;
-  width: 222.5px;
+  width: 95%;
 }
 
 
