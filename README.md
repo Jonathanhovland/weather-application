@@ -2,7 +2,7 @@
 
 In Progress
 
-React / Bootstrap / CsS
+React / Bootstrap / CSS
 
 A 5 day forecast weather application, using a public API from OpenWeatherApp.
 
